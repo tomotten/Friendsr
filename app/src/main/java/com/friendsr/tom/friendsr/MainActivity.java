@@ -53,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
         friends.add(o);
 
         FriendsAdapter adapter = new FriendsAdapter(getApplicationContext(), R.layout.grid_item, friends);
-
         GridView gv = findViewById(R.id.listView);
-        System.out.println("num columns = " + gv.getNumColumns());
         gv.setAdapter(adapter);
         gv.setOnItemClickListener(new GridItemClickListener());
     }

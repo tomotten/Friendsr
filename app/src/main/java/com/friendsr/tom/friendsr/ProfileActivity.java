@@ -21,19 +21,19 @@ public class ProfileActivity extends AppCompatActivity {
         retrievedFriend = (Friend) intent.getSerializableExtra("clicked_friend");
 
         TextView nameView = findViewById(R.id.nameField);
-        nameView.setText(retrievedFriend.getFriendName());
+        nameView.setText(retrievedFriend.getFriendName());  // Set correct name
 
         ImageView imgView = findViewById(R.id.profilePicture);
-        imgView.setImageDrawable(getDrawable(retrievedFriend.getDrawableId()));
+        imgView.setImageDrawable(getDrawable(retrievedFriend.getDrawableId())); // Set correct picture
 
         TextView bio = findViewById(R.id.bioField);
-        bio.setText(retrievedFriend.getBio());
+        bio.setText(retrievedFriend.getBio());  // Set correct bio
 
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
         Float aStoredrating = prefs.getFloat(retrievedFriend.getFriendName(), 0);
         RatingBar rate = findViewById(R.id.rateBar);
 
-        if(aStoredrating != 0) {
+        if(aStoredrating != 0) { // check if there are stored ratings for this person
             rate.setRating(aStoredrating);
         }
         rate.setOnRatingBarChangeListener(new RatingListener());
