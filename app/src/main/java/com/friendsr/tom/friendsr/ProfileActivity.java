@@ -19,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         Intent intent = getIntent();
         retrievedFriend = (Friend) intent.getSerializableExtra("clicked_friend");
-
+        setTitle("Friendsr  :   looking at " + retrievedFriend.getFriendName());      // make the name of friend appear in top menu
         TextView nameView = findViewById(R.id.nameField);
         nameView.setText(retrievedFriend.getFriendName());  // Set correct name
 
