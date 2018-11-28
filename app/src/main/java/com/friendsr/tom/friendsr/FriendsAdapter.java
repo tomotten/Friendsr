@@ -31,6 +31,7 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
         }
         Friend currFriend = friends.get(position);
 
+        // change all personal fields to display friend
         ImageView img = convertView.findViewById(R.id.imgView);
         TextView name = convertView.findViewById(R.id.nameField);
         img.setImageDrawable(getContext().getDrawable(currFriend.getDrawableId()));

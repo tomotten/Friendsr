@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String bioTest = "Roberts was executive director of Small Co., where he directed the activity of three regional branches. Roberts holds a master's degree in management from Any University. In his spare time he enjoys fly fishing and gourmet cooking with his wife, Elise.";
+        String bioTest = "Pieter was executive director of Small Co., where he directed the activity of three regional branches. Roberts holds a master's degree in management from Any University. In his spare time he enjoys fly fishing and gourmet cooking with his wife, Elise.";
         Friend a = new Friend("Hannah", bioTest, getResources().getIdentifier("friend0", "drawable", getPackageName()));
         friends.add(a);
         Friend b = new Friend("Hans", bioTest, getResources().getIdentifier("friend1", "drawable", getPackageName()));
